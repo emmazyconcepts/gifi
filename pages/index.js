@@ -5,6 +5,7 @@ import logo from "../public/logo.svg";
 import icon from "../public/hello.gif";
 import loading from "../public/loading.svg";
 import Head from "next/head";
+import work from "../public/wo.svg";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -36,9 +37,9 @@ export default function Home() {
           />{" "}
           <div className=" grid place-items-center lg:h-screen">
             <Image
-              src={icon}
+              src={work}
               alt="Picture of the logo "
-              className=" mt-28"
+              className=" mt-28 w-[50%] h-[50%]"
 
               // blurDataURL="data:..." automatically provided
               // placeholder="blur" // Optional blur-up while loading
