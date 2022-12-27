@@ -11,6 +11,11 @@ import loading from "../public/loading.svg";
 const inter = Inter({ subsets: ["Chivo Mono"] });
 
 export default function Home() {
+  function scrollWin() {
+    typeof window !== "undefined"
+      ? window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" })
+      : "";
+  }
   return (
     <>
       <div className="block min-[1070px]:flex">
@@ -40,7 +45,7 @@ export default function Home() {
               // blurDataURL="data:..." automatically provided
               // placeholder="blur" // Optional blur-up while loading
             />{" "}
-            <h1 className="down-text mt-10 mb-10 lg:-mt-[150px] lg:w-[490px] p-10">
+            <h1 className="down-text mt-10 mb-10 lg:-mt-[150px] lg:w-[490px] p-0 max-[1070px]:p-10 ">
               We're a tech startup aimed at providing swift & affordable
               services; domestic and professional. to consumers by linking
               qualified artisans closest to them.
@@ -106,7 +111,17 @@ export default function Home() {
                   required
                 />
               </div>
-              <button className="bg-[#803cef] w-full">Join Waitlist</button>
+              <button className="bg-[#803cef] w-full ">Join Waitlist</button>
+              <div
+                className="sy-whatshelp z-30 min-[1070px]:hidden"
+                onClick={() => scrollWin()}
+              >
+                <svg class="arrow">
+                  <path class="a1" d="M0 0 L30 22 L60 0"></path>
+                  <path class="a2" d="M0 20 L30 42 L60 20"></path>
+                  <path class="a3" d="M0 40 L30 62 L60 40"></path>
+                </svg>
+              </div>
             </div>
           </div>
         </div>
