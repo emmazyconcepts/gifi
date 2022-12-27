@@ -1,10 +1,10 @@
-import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
 import logo from "../public/logo.svg";
 import icon from "../public/hello.gif";
 import loading from "../public/loading.svg";
+import Head from "next/head";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +18,12 @@ export default function Home() {
   }
   return (
     <>
+      <Head>
+        <title>Gifijobs</title>
+        <link rel="shortcut icon" href="../public/favicon.ico" />
+
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <div className="block min-[1070px]:flex">
         <div className=" bg-[#D6CFFF] w-screen lg:h-screen ">
           <Image
